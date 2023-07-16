@@ -10,9 +10,9 @@ services:
       - DB_USER=$DB_USER
       - DB_NAME=$DB_NAME
       - DB_HOST=postgres_db
-    depends_on:
-      postgres_db:
-        condition: service_healthy
+    #depends_on:
+    #  postgres_db:
+    #    condition: service_healthy
   postgres_db:
     image: postgres
     environment:
