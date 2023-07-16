@@ -4,7 +4,7 @@ services:
   web:
     image: $IMAGE_TAG:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     ports:
-      - "8000:8000"
+      - "24000:24000"
     environment:
       - DB_PASSWORD=$DB_PASSWORD
       - DB_USER=$DB_USER
