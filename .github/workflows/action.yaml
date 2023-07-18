@@ -27,6 +27,7 @@ jobs:
           export IMAGE_TAG=${{ secrets.IMAGE_TAG }}
           cat docker-compose-ci.yaml | envsubst > deploy/docker-compose.yaml
           cat Dockerfile | envsubst > deploy/Dockerfile
+          cat requirements.txt | envsubst > deploy/requirements.txt
       - name: copy files
         uses: appleboy/scp-action@master
         with:
